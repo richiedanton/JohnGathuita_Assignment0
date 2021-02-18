@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ENC222-0424/2017
+    </title>
+    <link rel = "shortcut icon" href="#"/>
+    
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+   
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href= "https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet">
+
+    
+    <style>
+        
+#map {
+    height:100%;
+    width:100%;
+    left:0px; 
+    position: fixed;
+    height: 75%;
+	top: 70px;
+	padding-bottom: 20px;
+	zoom: 1.0;
+}
+
+
+#header {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    height: 76px;
+    top: 0px;
+    opacity: 0.80;
+    background-color:rgb(0,0,0,) none repeat scroll 0% 0%;
+    width: 100%;
+    
+}
+
+
+#title h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: xx-large;
+	height: 92px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+#footer {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    opacity: 0.70;
+    background-color: rgb(0, 0, 0) none repeat scroll 0% 0%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <div id = "title">
+            <h1><u>FIND YOUR RESTUARANT IN KENYA </u></h1>
+            <p></p>
+        </div>
+	</section>
+
+	
+    <section id="map">
+        
+    </section>
+</div>
+	
+	
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	
+	
+	var map = L.map('map', {
+    center: [0.1598, 37.499],
+    zoom: 6
+    });
+
+
+	L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=48q75muHRgW2xeDZPOr5', {
+		attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a>',
+	}).addTo(map);
+	var marker = new
+	L.marker([-0.516667, 34.45]).addTo(map).bindPopup("<b>Name: </b>Lorenzo & Maria's <b><br>Cuisine: </b> Continental").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-4.05, 39.66667]).addTo(map).bindPopup("<b>Name: </b>Bake Shop <br><b>Cuisine: </b> Bakery.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-4.17444, 39.46028]).addTo(map).bindPopup("<b>Name: </b>Wendy's <b><br>Cuisine:</b> Hamburgers.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-3.63333, 39.85]).addTo(map).bindPopup("<b>Name: </b>Dj Restuarant <b><br>Cuisine:</b> Irish.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.5, 40.03333]).addTo(map).bindPopup("<b>Name: </b>Riviera Caterer <b><br>Cusine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-2.26944, 40.90222]).addTo(map).bindPopup("<b>Name: </b>Tov Kosher Kitchen <b><br>Cusine:</b> Jewish/Kosher.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-3.50472, 38.37778]).addTo(map).bindPopup("<b>Name: </b>Brunos On the Boulevard <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.45694, 39.65833]).addTo(map).bindPopup("<b>Name: </b>Kosher Island <b><br>Cuisine:</b> Jewish/Kosher.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([1.75, 40.5]).addTo(map).bindPopup("<b>Name: </b>Wilken's Fine Food <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([3.916667, 41.83333]).addTo(map).bindPopup("<b>Name: </b>Regina Caterers <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([2.333333, 37.98333]).addTo(map).bindPopup("<b>Name: </b>Taste the Tropics Icecream <b><br>Cuisine:</b> Icecream,Gelato,Yogurt,Ices.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.35,37.58333]).addTo(map).bindPopup("<b>Name: </b>Wild Asia <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.05, 37.65]).addTo(map).bindPopup("<b>Name: </b>C & C catering Service <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.33333, 37.65]).addTo(map).bindPopup("<b>Name: </b>May May Kitchen <b><br>Cuisine:</b> Chinese.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.53333, 37.45]).addTo(map).bindPopup("<b>Name: </b>1 East 66Th Street Kitchen <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.36667, 38.01667]).addTo(map).bindPopup("<b>Name: </b>Seuda Foods <b><br>Cuisine: Jewish/Kosher.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.51667, 37.26667]).addTo(map).bindPopup("<b>Name: </b>Carvel Icecream <b><br>Cuisine:</b> Icecream,Gelato,Yogurt,Ices.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.78333, 37.63333]).addTo(map).bindPopup("<b>Name: </b>Carvel Icecream <b><br>Cuisine:</b> Icecraem,Gelato,Yogurt,Ices.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.45, 36.63333]).addTo(map).bindPopup("<b>Name: </b>Nordic Delicasies <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.41667, 36.95]).addTo(map).bindPopup("<b>Name: </b>Glorious Food <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.5, 37.28333]).addTo(map).bindPopup("<b>Name: </b>The Movable Feast <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.71667, 37.15]).addTo(map).bindPopup("<b>Name: </b>Sal's Deli <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.16667, 36.81667]).addTo(map).bindPopup("<b>Name: </b>Bully's Deli <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([3.116667, 35.6]).addTo(map).bindPopup("<b>Name: </b>Steve Chu's Deli & Grocery <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([1.233333, 35.11667]).addTo(map).bindPopup("<b>Name: </b>Harriet's Kitchen <b><br>Cuisine:</b> Chicken.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([1.1, 36.7]).addTo(map).bindPopup("<b>Name: </b>P & S Deli Grocery <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.516667, 35.28333]).addTo(map).bindPopup("<b>Name: </b>Angelica Film Center <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([1.016667, 35]).addTo(map).bindPopup("<b>Name: </b>White Castle <b><br>Cuisine:</b> Hamburgers.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.673056, 35.50833]).addTo(map).bindPopup("<b>Name: </b>Ho Mei ReStuarant <b><br>Cuisine:</b> Chinese.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.333333, 35.16667]).addTo(map).bindPopup("<b>Name: </b>The Country Cafe <b><br>Cuisine:</b> Turkish.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.5, 35.75]).addTo(map).bindPopup("<b>Name: </b>Shahememe Int'L Restaura <b><br>Cuisine:</b> Caribbean.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.016667, 37.06667]).addTo(map).bindPopup("<b>Name: </b>Downtown Deli <b><br>Cuisine:</b> Church Street.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.3, 36.06667]).addTo(map).bindPopup("<b>Name: </b>Carvel Ice Cream <b><br>Cuisine:</b> Ice cream, Gelato, Yogurt, Ices.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.08333, 35.86667]).addTo(map).bindPopup("<b>Name: </b>Dunkin'Donuts <b><br>Cuisine:</b> Donuts.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.85, 36.78333]).addTo(map).bindPopup("<b>Name: </b>Mejlander & Mulgannon <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.36667, 35.3]).addTo(map).bindPopup("<b>Name: </b>Olive's <b><br>Cuisine:</b> Bakery.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.78333, 35.35]).addTo(map).bindPopup("<b>Name: </b>Happy Garden <b><br>Cuisine:</b> Chinese.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.283333, 34.75]).addTo(map).bindPopup("<b>Name: </b>Cafe Metro <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.05, 34.725]).addTo(map).bindPopup("<b>Name: </b>Tony's Deli <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.566667,34.566667]).addTo(map).bindPopup("<b>Name: </b>Lexler Deli <b><br>Cuisine:</b> Sandwiches/Salads/Mixed Buffet .").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.453056, 34.125]).addTo(map).bindPopup("<b>Name: </b>Bagels N Buns <b><br>Cuisine:</b> Delicatessen.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([0.066667, 34.28333]).addTo(map).bindPopup("<b>Name: </b>Hot Bagels <b><br>Cuisine:</b> Bagels/Pretzels.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.1, 34.75]).addTo(map).bindPopup("<b>Name: </b>Snack Time Grill <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.66667, 34.83333]).addTo(map).bindPopup("<b>Name: </b>Dominos Pizza'S <b><br>Cuisine:</b> Pizza.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.68333, 34.76667]).addTo(map).bindPopup("<b>Name: </b>berkely <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-0.521, 34.914]).addTo(map).bindPopup("<b>Name: </b>Sonny's Heros <b><br>Cuisine:</b> American.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	L.marker([-1.28333,36.81667]).addTo(map).bindPopup("<b>Name: </b>Carvel Ice Cream <b><br>Cuisine:</b> Icecream,Gelato,Yogurt,Ices.").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	</script>
+</div> 
+
+
+<div class="col-md-6 footer">
+	 <h4> <span>&copy;</span> ENC222-0424/2017 | GICHARU JOHN GATHUITA </h4>
+</div>
+
+<style>
+.footer{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    position: absolute; 
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
+</style>
+
+</body>
+</html>
